@@ -1,0 +1,13 @@
+<%= link_to 'New Note', new_note_path, class: 'btn btn-light mb-4' %>
+<div class="d-flex">
+    <% @notes.each do |note| %>
+      <div class="card mr-1">
+        <h5 class="card-header"><%= note.title  %></h5>
+        <div class="card-body">
+          <p class="card-text"><%= truncate(note.body, length: 25) %></p>
+          <small class="text-muted d-block mb-3">Updated last: <%= time_ago_in_words(note.updated_at) %></small>
+          <%= link_to 'Edit Note', edit_note_path(note), class: 'btn btn-primary btn-sm' %>
+        </div>
+      </div>
+    <% end %>
+</div>
