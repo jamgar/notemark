@@ -1,1 +1,9 @@
 @import "bootstrap/scss/bootstrap";
+
+.jumbotron {
+  background-image: url("../../assets/images/home_banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+}

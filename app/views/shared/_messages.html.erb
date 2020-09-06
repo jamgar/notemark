@@ -1,6 +1,6 @@
 <% flash.each do | type, msg | %>
-  <div id="message" class="mt-4 alert alert-<%= type == "alert" ? "warning" : type %> alert-dimissible fade show rounded-sm" role="alert" >
-    <p class="text-center mb-0"><%= msg %></p>
+  <div id="message" class="mt-4 mx-sm-5 alert alert-<%= alert_helper(type) %> alert-dimissible fade show rounded-sm" role="alert" >
+    <span class="text-center mb-0"><%= msg %></span>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>

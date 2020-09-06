@@ -1,10 +1,10 @@
-<div class="mx-4">
-  <%= link_to 'New Note', new_note_path, class: 'btn btn-light shadow-sm rounded-sm border mt-4' %>
+<div class="mx-sm-4">
+  <%= link_to 'New Note', new_note_path, class: 'btn btn-light shadow-sm rounded-sm border mt-4 ml-2 ml-sm-0' %>
   <hr />
-  <div class="d-flex flex-wrap">
+  <div class="d-sm-flex flex-wrap">
       <% @notes.each do |note| %>
         <%= link_to note_path(note), class: 'text-decoration-none text-body' do %>
-          <div class="flex-fill card mr-1 mb-3 shadow-sm rounded-sm">
+          <div class="flex-fill card mr-sm-1 mb-3 shadow-sm rounded-sm">
             <h5 class="card-header text-primary"><%= note.title  %></h5>
             <div class="card-body">
               <small class="text-muted d-block mb-3">Updated: <%= time_ago_in_words(note.updated_at) %></small>

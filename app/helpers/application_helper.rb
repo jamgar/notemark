@@ -17,5 +17,16 @@ module ApplicationHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
-  
+
+  def alert_helper(type)
+    types = {
+      success: "success",
+      info: "info",
+      warning: "warning",
+      danger: "danger",
+      notice: "success",
+      alert: "danger"
+    }
+    types[type.to_sym]
+  end
 end
