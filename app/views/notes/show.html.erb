@@ -1,19 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @note.body %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @note.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<div class="mt-4 mx-5">
+  <h1><%= @note.title %></h1>
+  <hr />
+  <%= markdown(@note.body) %>
+  <hr />
+  <%= link_to 'Edit', edit_note_path(@note) %> |
+  <%= link_to 'Back', notes_path %>
+</div>
